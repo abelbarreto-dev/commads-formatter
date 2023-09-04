@@ -3,11 +3,57 @@
     <head>
         <meta charset="UTF-8">
         <title>Commiter</title>
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+              rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+              crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
     </head>
     <body>
-        <form action="" method="post">
-            <h1></h1>
-        </form>
+        <div class="container">
+            <form action="" method="post">
+                <h1 class="margin-25-high">GIT Commit Formatter</h1>
+
+                <div class="margin-25-high">
+                    <label for="select-tag">Commit Tag</label> <br>
+                    <select name="select-tag" id="select-tag" class="length-512 height-size-inputs">
+                        <option value="-m">Message</option>
+                        <option value="-a">All</option>
+                        <option value="-am">Amend</option>
+                        <option value="--no-verify">No Verify</option>
+                    </select>
+                </div>
+
+                <div class="margin-25-high">
+                    <label for="select-type">Select Your Commit Type</label> <br>
+                    <select name="select-type" id="select-type" class="length-512 height-size-inputs">
+                        <option value="feat:">Feature</option>
+                        <option value="exception:">Exception</option>
+                        <option value="doc:">Documentation</option>
+                        <option value="refactor:">Refactor</option>
+                        <option value="chore:">Chore</option>
+                    </select>
+                </div>
+
+                <div class="margin-25-high">
+                    <label for="commit-length">Set your commit length message parameter 10 ... 72</label> <br>
+                    <input type="number" name="commit-length" id="commit-length" value="50" max="72" min="10" class="length-512 height-size-inputs">
+                </div>
+
+                <div class="margin-25-high">
+                    <label for="commit-message">Type your commit message</label> <br>
+                    <input id="commit-message" type="text" maxlength="72" class="height-size-inputs">
+                </div>
+
+                <div class="margin-25-high">
+                    <label for="commit-result">The Commit Message Generated</label> <br>
+                    <input id="commit-result" type="text" maxlength="72" value="commit message result" class="height-size-inputs">
+                </div>
+
+                <button type="submit" class="btn btn-primary margin-25-high">Generate Commit and Copy To Clipboard</button>
+
+            </form>
+        </div>
         <script src="js/scripts.js"></script>
     </body>
 </html>

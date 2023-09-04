@@ -1,0 +1,19 @@
+.length-512 {
+    width: 512px;
+}
+
+.margin-25-high {
+    margin-top: 25px;
+}
+
+.height-size-inputs {
+    height: 30px;
+}
+
+#commit-message {
+    width: 512px;
+}
+
+#commit-result {
+    width: 512px;
+}
