@@ -10,10 +10,6 @@
     height: 30px;
 }
 
-#commit-message {
-    width: 512px;
-}
-
-#commit-result {
+.input-512 {
     width: 512px;
 }

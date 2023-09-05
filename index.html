@@ -11,51 +11,112 @@
     </head>
     <body>
         <div class="container">
-            <form action="" method="post" id="formGitFormatter">
-                <h1 class="margin-25-high">GIT Commit Formatter</h1>
+            <div class="row margin-25-high">
+                <div class="col">
+                    <form action="" method="post" id="formGitFormatter">
+                        <h1>GIT Commit Formatter</h1>
 
-                <div class="margin-25-high">
-                    <label for="select-tag">Commit Tag</label> <br>
-                    <select name="select-tag" id="select-tag" class="length-512 height-size-inputs">
-                        <option value="-m">Message</option>
-                        <option value="-a">All</option>
-                        <option value="-am">Amend</option>
-                        <option value="--no-verify">No Verify</option>
-                    </select>
+                        <div class="margin-25-high">
+                            <label for="select-tag">Commit Tag</label> <br>
+                            <select name="select-tag" id="select-tag" class="length-512 height-size-inputs">
+                                <option value="-m">Message</option>
+                                <option value="-a">All</option>
+                                <option value="-am">Amend</option>
+                                <option value="--no-verify">No Verify</option>
+                            </select>
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="select-type">Select Your Commit Type</label> <br>
+                            <select name="select-type" id="select-type" class="length-512 height-size-inputs">
+                                <option value="feat">Feature</option>
+                                <option value="exception">Exception</option>
+                                <option value="doc">Documentation</option>
+                                <option value="refactor">Refactor</option>
+                                <option value="chore">Chore</option>
+                                <option value="hotfix">Hotfix</option>
+                                <option value="fix">Fix</option>
+                            </select>
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="commit-length">Set your commit length message parameter 10 ... 72</label> <br>
+                            <input type="number" name="commit-length" id="commit-length" value="50" max="72" min="10" class="length-512 height-size-inputs">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="commit-message">Type your commit message</label> <br>
+                            <input id="commit-message" type="text" maxlength="72" class="height-size-inputs input-512">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="commit-result">The Commit Message Generated</label> <br>
+                            <input id="commit-result" type="text" maxlength="72" value="commit message result" class="height-size-inputs input-512">
+                        </div>
+
+                        <button type="submit" class="btn btn-primary margin-25-high">Generate Commit and Copy To Clipboard</button>
+
+                    </form>
                 </div>
+                <div class="col">
+                    <form action="" method="post" id="formGitBranch">
+                        <h1>Git Branch Generator</h1>
 
-                <div class="margin-25-high">
-                    <label for="select-type">Select Your Commit Type</label> <br>
-                    <select name="select-type" id="select-type" class="length-512 height-size-inputs">
-                        <option value="feat:">Feature</option>
-                        <option value="exception:">Exception</option>
-                        <option value="doc:">Documentation</option>
-                        <option value="refactor:">Refactor</option>
-                        <option value="chore:">Chore</option>
-                        <option value="hotfix:">Hotfix</option>
-                        <option value="fix:">Fix</option>
-                    </select>
+                        <div class="margin-25-high">
+                            <label for="select-type-branch">Select Your Branch Type</label> <br>
+                            <select name="select-type-branch" id="select-type-branch" class="length-512 height-size-inputs">
+                                <option value="feat/">Feature</option>
+                                <option value="exception/">Exception</option>
+                                <option value="doc/">Documentation</option>
+                                <option value="refactor/">Refactor</option>
+                                <option value="chore/">Chore</option>
+                                <option value="hotfix/">Hotfix</option>
+                                <option value="fix/">Fix</option>
+                            </select>
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-length">Set your branch length phrase parameter 10 ... 72</label> <br>
+                            <input type="number" name="branch-length" id="branch-length" value="50" max="72" min="10" class="length-512 height-size-inputs">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-phrase">Type your Branch Name</label> <br>
+                            <input id="branch-phrase" type="text" maxlength="72" class="height-size-inputs input-512">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-result">The Branch Command</label> <br>
+                            <input id="branch-result" type="text" maxlength="72" value="branch message result" class="height-size-inputs input-512">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-rename">The Branch Rename</label> <br>
+                            <input id="branch-rename" type="text" maxlength="72" value="branch message result" class="height-size-inputs input-512">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-checkout">The Branch Checkout</label> <br>
+                            <input id="branch-checkout" type="text" maxlength="72" value="branch message result" class="height-size-inputs input-512">
+                        </div>
+
+                        <div class="margin-25-high">
+                            <label for="branch-result-phrase">The Branch Phrase</label> <br>
+                            <input id="branch-result-phrase" type="text" maxlength="72" value="branch message result" class="height-size-inputs input-512">
+                        </div>
+
+
+
+                        <button name="btn-branch" type="submit" class="btn btn-primary margin-25-high">Branch Copy To Clipboard</button>
+                        <button name="btn-rename" type="submit" class="btn btn-success margin-25-high">Rename Copy To Clipboard</button>
+                        <button name="btn-checkout" type="submit" class="btn btn-warning margin-25-high">Checkout Copy To Clipboard</button>
+                        <button name="btn-phrase" type="submit" class="btn btn-danger margin-25-high">Phrase Copy To Clipboard</button>
+                    </form>
                 </div>
-
-                <div class="margin-25-high">
-                    <label for="commit-length">Set your commit length message parameter 10 ... 72</label> <br>
-                    <input type="number" name="commit-length" id="commit-length" value="50" max="72" min="10" class="length-512 height-size-inputs">
-                </div>
-
-                <div class="margin-25-high">
-                    <label for="commit-message">Type your commit message</label> <br>
-                    <input id="commit-message" type="text" maxlength="72" class="height-size-inputs">
-                </div>
-
-                <div class="margin-25-high">
-                    <label for="commit-result">The Commit Message Generated</label> <br>
-                    <input id="commit-result" type="text" maxlength="72" value="commit message result" class="height-size-inputs">
-                </div>
-
-                <button type="submit" class="btn btn-primary margin-25-high">Generate Commit and Copy To Clipboard</button>
-
-            </form>
+            </div>
         </div>
+
         <script src="js/scripts.js"></script>
+        <script src="js/branches.js"></script>
     </body>
 </html>
