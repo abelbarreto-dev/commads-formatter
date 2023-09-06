@@ -7,4 +7,4 @@ Basically open the [index.html](index.html) in your browser.
 JavaScript file to generate it.
 
 ## GitHub Pages
-- [Commands Formatter](https://abelbarreto-dev.github.io/commads-formatter)
+- [Commands Formatter](https://abelbarreto-dev.github.io/commands-formatter)
